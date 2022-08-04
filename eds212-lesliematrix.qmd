@@ -1,0 +1,33 @@
+---
+title: "Leslie Matrix Task"
+author: "Amritpal Sandhu"
+format: html
+editor: visual
+---
+
+## Leslie Matrix Assignment
+
+```{r}
+
+insect_leslie <- matrix(c(0, 0, 0, 600, 0, 0, .25, 0, 0, .1, 0, 0, 0, 0, .4, 0), nrow = 4, ncol = 4, byrow = TRUE)
+
+insect_leslie
+```
+
+```{r}
+insect_y0 <- c(0, 40000, 600, 450)
+
+insect_y0
+```
+
+```{r}
+insect_y1 <- insect_leslie %*% insect_y0 * .8
+
+insect_y1 
+```
+
+```{r}
+insect_y2 <- insect_leslie %*% insect_y1
+
+insect_y2
+```
